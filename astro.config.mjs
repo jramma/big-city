@@ -10,6 +10,7 @@ import react from "@astrojs/react";
 
 export default defineConfig({
   site: "https://bigcitylife.netlify.app",
+  output: 'static',
   integrations: [mdx(), sitemap(), icon(), react()],
   vite: {
     plugins: [tailwindcss()],

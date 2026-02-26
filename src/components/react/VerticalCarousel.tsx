@@ -127,30 +127,36 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({
       >
         {images.map(({ src, alt }, index) => {
           const baseName = src.replace(".webp", "").replace("/assets/", "");
-          const srcset = [
-            `/assets/${baseName}-400.webp 400w`,
-            `/assets/${baseName}-800.webp 800w`,
-            `/assets/${baseName}-1200.webp 1200w`,
-          ].join(", ");
 
           return (
             <div
               key={index}
-              className="flex flex-grow justify-center h-full min-w-[100vw] md:w-full md:min-w-0 md:h-auto"
+              className="flex grow justify-center h-full min-w-screen md:w-full md:min-w-0 md:h-auto"
             >
-              <img
-                src={`/assets/${baseName}-800.webp`}
-                srcSet={srcset}
-                sizes="(max-width: 768px) 90vw, 1200px"
-                width="1200"
-                height="800"
-                alt={alt}
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding="async"
-                draggable={false}
-                fetchPriority={index === 0 ? "high" : "low"}
-                className="object-contain max-h-[80vh] max-w-[90vw] md:max-w-full"
-              />
+              <picture>
+                {/* Mobile: solo 400w (suficiente para ~90vw en móviles) */}
+                <source
+                  media="(max-width: 768px)"
+                  srcSet={`/assets/${baseName}-400.webp`}
+                  type="image/webp"
+                />
+                {/* Desktop: 800w (suficiente para max-h-[80vh]) */}
+                <source
+                  media="(min-width: 769px)"
+                  srcSet={`/assets/${baseName}-800.webp`}
+                  type="image/webp"
+                />
+                {/* Fallback */}
+                <img
+                  src={`/assets/${baseName}-400.webp`}
+                  alt={alt}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  draggable={false}
+                  fetchPriority={index === 0 ? "high" : "low"}
+                  className="object-contain max-h-[80vh] max-w-[90vw] md:max-w-full"
+                />
+              </picture>
             </div>
           );
         })}

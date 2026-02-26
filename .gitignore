@@ -22,4 +22,5 @@ bun.lock
 
 # jetbrains setting folder
 .idea/
-package-lock.json
+package-lock.yaml
+pnpm-lock.json

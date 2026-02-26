@@ -1,5 +1,7 @@
 # Big City Life - Astro Photography Portfolio
 
+![Preview](preview.png)
+
 > Feedback is very welcome—please and thank you! Feel free to open an issue or submit a pull request with suggestions or improvements — [jramma.com](https://jramma.com)
 
 A modern photography portfolio website built with Astro, featuring dynamic content management, interactive galleries, and responsive design.
@@ -112,13 +114,13 @@ const posts = (await getCollection("blog")).sort(
 
 ```bash
 # Install dependencies
-bun i
+pnpm i
 
 # Start development server
-bun run dev
+pnpm run dev
 
 # Build for production
-bun run build
+pnpm run build
 ```
 
 ### Content Management
@@ -184,8 +186,7 @@ This project serves as a **comprehensive example** for:
 
 The site is optimized for deployment on:
 
-- **Vercel** (recommended)
-- **Netlify**
+- **Netlify** (current config)
 - **GitHub Pages**
 - **Any static hosting service**
 

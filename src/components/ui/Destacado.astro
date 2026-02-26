@@ -6,12 +6,16 @@ interface Props {
 
 const { post } = Astro.props;
 const hero = post?.data?.heroImage as string;
-const basePath = hero ? `/assets${hero.startsWith('/') ? hero : `/${hero}`}` : '';
+const basePath = hero
+  ? `/assets${hero.startsWith("/") ? hero : `/${hero}`}`
+  : "";
 const widths = [640, 768, 1024, 1280, 1536];
 const quality = 60;
 const srcset = basePath
-  ? widths.map((w) => `${basePath}?nf_resize=fit&w=${w}&q=${quality} ${w}w`).join(', ')
-  : '';
+  ? widths
+      .map((w) => `${basePath}?nf_resize=fit&w=${w}&q=${quality} ${w}w`)
+      .join(", ")
+  : "";
 const sizes = "100vw";
 
 var margin = "";
@@ -19,12 +23,13 @@ if (post.id === "img2") {
   margin = "!mt-0";
 }
 import FormattedDate from "@/components/FormattedDate.astro";
+import { Picture } from "astro:assets";
 const description = post.data.description;
-const words = description.split(' ');
-let formattedDescription = '';
+const words = description.split(" ");
+let formattedDescription = "";
 
 if (words.length > 2) {
-  formattedDescription = `${words[0]} ${words[1]}<br />${words.slice(2).join(' ')}`;
+  formattedDescription = `${words[0]} ${words[1]}<br />${words.slice(2).join(" ")}`;
 } else {
   formattedDescription = description; // Si tiene 2 palabras o menos, no modificamos
 }
@@ -32,28 +37,35 @@ if (words.length > 2) {
 
 <a
   href={`/blog/${post.id}/`}
-  class="flex flex-grow h-[100vh] w-full text-white object-cover relative py-10"
+  class="flex grow h-screen w-full text-white object-cover relative py-10"
 >
-<div class="bg-black">
-  {hero && (
-    <img
-      src={`${basePath}?nf_resize=fit&w=1280&q=${quality}`}
-      srcset={srcset}
-      sizes={sizes}
-      alt=""
-      width="1280"
-      height="720"
-      class="w-full h-full object-cover opacity-50"
-      loading="lazy"
-      decoding="async"
-    />
-  )}
-</div>
+  <div class="bg-black">
+    {
+      hero && (
+        <Picture
+          src={basePath}
+          srcset={srcset}
+          sizes={sizes}
+          alt={post.data.title}
+          width="1280"
+          height="720"
+          class="w-full h-full object-cover opacity-50"
+          loading="lazy"
+          quality={20}
+          decoding="async"
+        />
+      )
+    }
+  </div>
   <div
-    class="absolute bottom-16 left-6 font-bold pr-16 flex flex-col gap-3  w-full"
+    class="absolute bottom-16 left-6 font-bold pr-16 flex flex-col gap-3 w-full"
   >
-    <p class="text-4xl font-medium ">{post.data.title}</p>
-    <p class="text-7xl max-w-96 " set:html={formattedDescription}></p>
-   <div class="flex items-center"> <FormattedDate date={new Date(post.data.pubDate)} />  <span class="w-5 text-5xl -mb-7 ml-2">&dot;</span> <p>4 min read</p> </div>
+    <p class="text-4xl font-medium">{post.data.title}</p>
+    <p class="text-7xl max-w-96" set:html={formattedDescription} />
+    <div class="flex items-center">
+      <FormattedDate date={new Date(post.data.pubDate)} />
+      <span class="w-5 text-5xl -mb-7 ml-2">&dot;</span>
+      <p>4 min read</p>
+    </div>
   </div>
 </a>

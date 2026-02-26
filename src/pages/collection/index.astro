@@ -11,7 +11,7 @@ const posts = (await getCollection("collection")).sort(
 
 <Layout>
   <section
-    class="overflow-hidden md:max-h-[100vh] self-center md:px-6 no-scrollbar flex md:flex-row flex-col-reverse"
+    class="overflow-hidden md:max-h-screen self-center md:px-6 no-scrollbar flex md:flex-row flex-col-reverse"
   >
     <div class="grid md:grid-cols-2 gap-x-6 md:mb-40">
       <div>
@@ -24,7 +24,7 @@ const posts = (await getCollection("collection")).sort(
       </ul>
     </div>
     <div
-      class="text-4xl max-w-72 md:max-w-none md:text-9xl md:h-[100vh] w-20 relative mr-10"
+      class="text-4xl max-w-72 md:max-w-none md:text-9xl md:h-screen w-20 relative mr-10"
     >
       <p class="md:rotate-90 mt-40 md:text-nowrap font-fugaz">Collection</p>
     </div>

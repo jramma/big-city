@@ -8,10 +8,10 @@ import { Icon } from "astro-icon/components";
 const { text, href } = Astro.props;
 ---
 
-<div class="border-dotted border-1 w-64 h-25 relative ml-6 group cursor-pointer z-20">
+<div class="border-dotted border w-64 h-25 relative ml-6 group cursor-pointer z-20">
   <a
     href={href ?? "#"}
-    class="flex group p-2  w-64 justify-between border-1 absolute -left-1 -top-1  group-hover:-left-4 group-hover:-top-4 transition-all ease-in-out duration-500 cursor-pointer bg-white"
+    class="flex group p-2  w-64 justify-between border absolute -left-1 -top-1  group-hover:-left-4 group-hover:-top-4 transition-all ease-in-out duration-500 cursor-pointer bg-white"
   >
     <p class="mt-auto">{text}</p>
     <Icon

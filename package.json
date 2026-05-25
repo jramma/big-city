@@ -1,10 +1,10 @@
 {
-  "name": "bigcitylife",
+  "name": "bigcity",
   "type": "module",
-  "version": "0.1.0",
-  "author": "jramma.com",
+  "version": "1.0.0",
+  "author": "casset.cat",
   "license": "MIT",
-  "homepage": "https://bigcitylife.netlify.app",
+  "homepage": "https://bigcity.casset.cat",
   "repository": {
     "type": "git",
     "url": "https://github.com/jramma/bigcitylife"
@@ -13,27 +13,26 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "generate-images": "node scripts/generate-city-images.js"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "4.3.13",
-    "@astrojs/react": "4.4.2",
-    "@astrojs/rss": "4.0.15",
-    "@astrojs/sitemap": "3.7.0",
+    "@astrojs/mdx": "5.0.6",
+    "@astrojs/react": "5.0.5",
+    "@astrojs/rss": "4.0.18",
+    "@astrojs/sitemap": "3.7.2",
     "@iconify/react": "^6.0.2",
-    "@tailwindcss/vite": "^4.1.4",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "astro": "5.18.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "astro": "6.3.7",
     "astro-icon": "^1.1.5",
-    "framer-motion": "^12.9.2",
+    "framer-motion": "^12.40.0",
     "hamburger-react": "^2.5.2",
     "iconify": "^1.4.0",
     "ogl": "^1.0.11",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.4"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "tailwindcss": "^4.3.0"
   },
   "engines": {
     "node": ">=20.3.0"

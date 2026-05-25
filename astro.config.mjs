@@ -9,7 +9,7 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 
 export default defineConfig({
-  site: "https://bigcitylife.netlify.app",
+  site: "https://bigcity.casset.cat",
   output: 'static',
   integrations: [mdx(), sitemap(), icon(), react()],
   vite: {

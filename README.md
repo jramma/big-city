@@ -6,7 +6,7 @@
 
 A modern photography portfolio website built with Astro, featuring dynamic content management, interactive galleries, and responsive design.
 
-See it deployed: [bigcitylife.netlify.app](https://bigcitylife.netlify.app/)
+See it deployed: [bigcity.casset.cat](https://bigcity.casset.cat/)
 
 ## 🚀 Architecture Overview
 
@@ -186,7 +186,7 @@ This project serves as a **comprehensive example** for:
 
 The site is optimized for deployment on:
 
-- **Netlify** (current config)
+- **Cloudfare** (current config)
 - **GitHub Pages**
 - **Any static hosting service**
 
@@ -199,3 +199,21 @@ This project is open source and available under the MIT License.
 **Created by [jramma.com](https://jramma.com)**
 
 _This project serves as an educational resource for photographers and developers looking to build modern, performant portfolio websites with Astro. Feel free to use it as a starting point for your own photography portfolio or as a learning resource for Astro development._
+
+## Deploy on Cloudfare
+
+1. Create an account on Cloudfare
+
+2. Execute:
+
+  ```bash
+  
+  pnpm i
+  
+  pnpm run build
+  
+  npx wrangler pages deploy dist --project-name=bigcity
+  
+  ```
+
+3. Check settings on Cloudfare workers/pages

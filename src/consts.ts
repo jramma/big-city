@@ -4,7 +4,7 @@
 // Site metadata
 export const SITE_TITLE = "Big City Life";
 export const SITE_DESCRIPTION = "This is a template for an Astro site";
-export const SITE_URL = "https://bigcitylife.netlify.app";
+export const SITE_URL = "https://bigcity.casset.cat";
 export const SITE_AUTHOR = "jramma.com";
 export const SITE_EMAIL = "contact@jramma.com";
 

@@ -2,7 +2,7 @@
 
 ![Preview](preview.png)
 
-> Feedback is very welcome—please and thank you! Feel free to open an issue or submit a pull request with suggestions or improvements — [jramma.com](https://jramma.com)
+> Feedback is very welcome—please and thank you! Feel free to open an issue or submit a pull request with suggestions or improvements — [casset.cat](https://casset.cat)
 
 A modern photography portfolio website built with Astro, featuring dynamic content management, interactive galleries, and responsive design.
 
@@ -196,7 +196,7 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Created by [jramma.com](https://jramma.com)**
+**Created by [casset.cat](https://casset.cat)**
 
 _This project serves as an educational resource for photographers and developers looking to build modern, performant portfolio websites with Astro. Feel free to use it as a starting point for your own photography portfolio or as a learning resource for Astro development._
 
